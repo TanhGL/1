@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sử dụng đối tượng Date</title>
+  </head>
+  <body>
+    <form>
+      <label for="ngay">Ngày:</label>
+      <input type="number" id="ngay" name="ngay" min="1" max="31" required>
+      <label for="thang">Tháng:</label>
+      <input type="number" id="thang" name="thang" min="1" max="12" required>
+      <label for="nam">Năm:</label>
+      <input type="number" id="nam" name="nam" min="1900" max="2100" required>
+      <button type="button" onclick="xuat_ket_qua()">Xuất kết quả</button>
+    </form>
+    <div id="ketQua"></div>
+
+    <script>
+      function xuat_ket_qua() {
+        const ngay = document.getElementById("ngay").value;
+        const thang = document.getElementById("thang").value;
+        const nam = document.getElementById("nam").value;
+
+        const ngayThangNam = `${thang}/${ngay}/${nam}`;
+        const ngayOfWeek = new Date(ngayThangNam).toLocaleDateString('vi-VN', {weekday: 'long'});
+
+        const ketQua = `${ngayOfWeek}, ${ngayThangNam}`;
+        document.getElementById("ketQua").innerHTML = ketQua;
+      }
+    </script>
+  </body>
+</html>
