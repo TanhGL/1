@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <iomanip>
-
+sÄ‘sdsdsdsdsdsdsdsÄ‘ghggj
 struct BoSua {
     int maBo;
     std::string tenBo;
@@ -11,12 +11,12 @@ struct BoSua {
 };
 
 void printBoSua(const BoSua& boSua) {
-    std::cout << "[BoSua] = \"Mã Bò: " << boSua.maBo
-              << "\",\"Tên Bò: " << boSua.tenBo
-              << "\",\"Ngày Sinh: " << std::setw(2) << std::setfill('0') << boSua.ngaySinh.substr(0, 2)
+    std::cout << "[BoSua] = \"MÃ£ BÃ²: " << boSua.maBo
+              << "\",\"TÃªn BÃ²: " << boSua.tenBo
+              << "\",\"NgÃ y Sinh: " << std::setw(2) << std::setfill('0') << boSua.ngaySinh.substr(0, 2)
               << "/" << boSua.ngaySinh.substr(2, 2) << "/" << boSua.ngaySinh.substr(4)
-              << "\",\"Gi?i tính: " << boSua.gioiTinh
-              << "\",\"Cân n?ng: " << std::fixed << std::setprecision(1) << boSua.canNang << "kg\"\n";
+              << "\",\"Gi?i tÃ­nh: " << boSua.gioiTinh
+              << "\",\"CÃ¢n n?ng: " << std::fixed << std::setprecision(1) << boSua.canNang << "kg\"\n";
 }
 
 
